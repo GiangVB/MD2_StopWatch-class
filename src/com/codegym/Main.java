@@ -10,10 +10,10 @@ public class Main {
         for (int i = 0; i < 100000; i++) {
             a[i] = (int)(Math.random()*1000);
         }
-        LocalTime start = LocalTime.now();
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
         a = selectionSort(a);
-        LocalTime end = LocalTime.now();
-        StopWatch stopWatch = new StopWatch(start,end);
+        stopWatch.end();
 
         System.out.println("Thời gian thực thi thuật toán sắp xếp 100,000 số: " + stopWatch.getElapsedTime() + " milli giây");
     }
